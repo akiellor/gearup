@@ -32,4 +32,8 @@ $ gearup
 
 NOTES
 =====
-To use 'less', you will need to install 'therubyracer'
+Only supports on MRI (should be both 1.8 and 1.9) at the moment.
+
+Feedback
+========
+Let me know, if your using it and/or if you have any trouble.
