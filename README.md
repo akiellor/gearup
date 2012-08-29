@@ -30,3 +30,6 @@ $ gearup
 
 5. Open "http://localhost:3000/javascripts/application.js" in your favourite browser and note the compilation
 
+NOTES
+=====
+To use 'less', you will need to install 'therubyracer'
