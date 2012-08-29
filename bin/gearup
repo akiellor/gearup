@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'thin'
+require 'sprockets'
+
+Thin::Server.start('0.0.0.0', 3000) do
+  env = Sprockets::Environment.new ARGV[0] || "."
+  env.append_path "."
+  run env
+end
