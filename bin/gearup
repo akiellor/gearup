@@ -2,6 +2,8 @@
 
 require 'rubygems'
 require 'thin'
+require 'less'
+require 'coffee-script'
 require 'sprockets'
 
 Thin::Server.start('0.0.0.0', 3000) do

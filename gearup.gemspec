@@ -22,4 +22,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency("haml", "~> 3.1.7")
   gem.add_dependency("sass", "~> 3.2.1")
   gem.add_dependency("less", "~> 2.2.1")
+  gem.add_dependency("therubyracer", "~> 0.10.2")
 end
