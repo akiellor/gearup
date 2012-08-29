@@ -6,9 +6,9 @@ GearUp is a simple Gem that will start a thin server running sprockets (rails as
 What does this means for you?
 -----------------------------
 
-1. You have <some-directory> with some assets:
+1. You have "some-directory" with some assets:
 ```
-$ ls
+$ ls <some-directory>
 javascripts/application.js.coffee
 stylesheets/application.css.less
 ```
