@@ -1,13 +1,14 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'thin'
+require 'rack'
 require 'less'
 require 'coffee-script'
 require 'sprockets'
 
-Thin::Server.start('0.0.0.0', 3000) do
-  env = Sprockets::Environment.new ARGV[0] || "."
-  env.append_path "."
-  run env
-end
+
+env = Sprockets::Environment.new ARGV[0] || "."
+env.append_path "."
+
+Rack::Handler::WEBrick.run(env, :Port => 3000)
+
