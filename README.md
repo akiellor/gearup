@@ -32,7 +32,7 @@ $ gearup
 
 NOTES
 =====
-Only supports on MRI (should be both 1.8 and 1.9) at the moment.
+Played with on JRuby 1.6.7.2, 1.9.2, 1.9.3.
 
 Feedback
 ========
