@@ -1,16 +1,11 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH << File.expand_path("../lib", File.dirname(__FILE__))
+
 require 'rubygems'
-require 'rack'
-require 'less'
-require 'coffee-script'
-require 'sprockets'
-require 'haml'
+require 'gearup'
 
+include Gearup
 
-env = Sprockets::Environment.new ARGV[0] || "."
-env.register_engine '.haml', Tilt::HamlTemplate
-env.append_path "."
-
-Rack::Handler::WEBrick.run(env, :Port => 3000)
+Server.new(Environment.build(ARGV[0] || "."), 3000).start
 
