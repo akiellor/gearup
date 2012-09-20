@@ -5,9 +5,11 @@ require 'rack'
 require 'less'
 require 'coffee-script'
 require 'sprockets'
+require 'haml'
 
 
 env = Sprockets::Environment.new ARGV[0] || "."
+env.register_engine '.haml', Tilt::HamlTemplate
 env.append_path "."
 
 Rack::Handler::WEBrick.run(env, :Port => 3000)
