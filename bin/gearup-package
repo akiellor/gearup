@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path("../lib", File.dirname(__FILE__))
+
+require 'rubygems'
+require 'gearup'
+require 'pathname'
+
+include Gearup
+
+asset_dir, target_dir, *assets = ARGV
+
+env = Environment.build(asset_dir)
+
+assets.each do |asset_name|
+  asset = env.find_asset(asset_name)
+  destination_path = Pathname.new(File.expand_path(asset.digest_path, target_dir))
+  destination_path.dirname.mkpath
+  File.open(destination_path, 'w') {|f| f.write asset.body }
+end
+
