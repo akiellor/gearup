@@ -25,7 +25,7 @@ Gem::Specification.new do |gem|
   
   if RUBY_PLATFORM == 'java'
     gem.add_dependency("therubyrhino", "~> 2.0.1")
-    gem.add_development_dependency("jruby-openssl", "~> 0.7.7")
+    gem.add_development_dependency("jruby-openssl", "~> 0.8.5")
   else
     gem.add_dependency("therubyracer", "~> 0.10.2")
   end
