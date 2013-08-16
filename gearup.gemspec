@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "gearup"
   gem.require_paths = ["lib"]
   gem.version       = Gearup::VERSION
+  gem.platform      = Gem::Platform::CURRENT
   
   gem.add_development_dependency("rake", "~> 0.9.2.2")
   gem.add_dependency("rack", "~> 1.4.1")
