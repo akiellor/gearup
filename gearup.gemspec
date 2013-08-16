@@ -23,7 +23,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency("sass", "~> 3.2.1")
   gem.add_dependency("less", "~> 2.2.1")
   
-  if RUBY_PLATFORM =~ /java/
+  if RUBY_PLATFORM == 'java'
     gem.add_dependency("therubyrhino", "~> 2.0.1")
     gem.add_development_dependency("jruby-openssl", "~> 0.7.7")
   else
