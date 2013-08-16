@@ -14,7 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "gearup"
   gem.require_paths = ["lib"]
   gem.version       = Gearup::VERSION
-  gem.platform      = Gem::Platform::CURRENT
   
   gem.add_development_dependency("rake", "~> 0.9.2.2")
   gem.add_dependency("rack", "~> 1.4.1")
@@ -23,11 +22,4 @@ Gem::Specification.new do |gem|
   gem.add_dependency("haml", "~> 3.1.7")
   gem.add_dependency("sass", "~> 3.2.1")
   gem.add_dependency("less", "~> 2.2.1")
-  
-  if RUBY_PLATFORM == 'java'
-    gem.add_dependency("therubyrhino", "~> 2.0.1")
-    gem.add_development_dependency("jruby-openssl", "~> 0.8.5")
-  else
-    gem.add_dependency("therubyracer", "~> 0.10.2")
-  end
 end
