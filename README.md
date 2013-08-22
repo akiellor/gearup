@@ -1,5 +1,7 @@
-GearUp!
+[ABANDONED] GearUp!
 ===============================================
+
+**If your thinking of using something like this gem. Look at [Middleman](http://middlemanapp.com)**
 
 GearUp is a simple Gem that will start a thin server running sprockets (rails asset-pipeline).
 
